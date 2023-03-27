@@ -5,7 +5,6 @@
  */
 package prog2.brunetti.entities;
 
-import static com.sun.tools.javac.tree.TreeInfo.name;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

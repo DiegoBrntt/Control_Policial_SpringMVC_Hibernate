@@ -1,8 +1,3 @@
-<%-- 
-    Document   : vistaResultado
-    Created on : 2 nov. 2021, 23:26:49
-    Author     : Grandalf
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,45 +6,77 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="resources/css/estilos.css">
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <title>JSP Page</title>
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark text-white d-flex justify-content-between">
+                
+                <a href="#contratos" class="nav-link mx-2">Contratos</a>
                 <form action="/" method="get">
-                <input type="submit" name="cerrarSesion" value="Cerrar Sesion">
-                <a href="#contratos">Contratos</a>
+                <input type="submit" class="btn btn-secondary mx-2" name="cerrarSesion" value="Cerrar Sesion">
+                
+                </form>
             </nav>
         </header>
 
-        <h1>Bienevenido/a ${usuario.tipo} ${usuario.clave}</h1>
+        <h1>${usuario.tipo} ${usuario.clave}</h1>
         <c:choose>
             <c:when test="${empty contratosVigilante}">
                 <h2>No posee contratos</h2>
             </c:when>
             <c:otherwise>
-                <table id="contratos">
-                    <CAPTION ALIGN=top>Mis Contratos</CAPTION>
-                    <tr>
-                        <th>Contrato</th>
-                        <th>Fecha</th>
-                        <th>Sucursal</th>
-                        <th>Vigilante</th>
-                        <th>Dias Contratados</th>
-                        <th>Armado</th>
-                        <th>Estado</th>
-                    </tr>
-                    <c:forEach var="contrato" items="${contratosVigilante}">
-                        <tr>
-                            <td>${contrato.codigo_contrato}</td>
-                            <td>${contrato.fecha_contratacion}</td>
-                            <td>${contrato.codigo_suc.domicilio}</td>
-                            <td>${contrato.codigo_vig.clave}</td>
-                            <td>${contrato.dias_contratados}</td>
-                            <td>${contrato.armado==true? 'Si':'No'} </td>
-                            <td>${contrato.estado==true? 'Vigente':'Caduco'}</td>
+                <table id="contratos" class="table table-responsive table-bordered border-dark">
+                    <legend class="text-center bg-dark text-white m-0">Mis Contratos</legend>
+                    <thead>
+                        <tr class="row bg-info ">
+                            <th class="col">Contrato</th>
+                            <th class="col">Fecha</th>
+                            <th class="col">Sucursal</th>
+                            <th class="col">Vigilante</th>
+                            <th class="col">Dias Contratados</th>
+                            <th class="col">Armado</th>
+                            <th class="col">Estado</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="contrato" items="${contratosVigilante}">
+                            <c:choose>
+                                <c:when test="${contrato.estado}">
+                                    <tr class="row">
+                                        <td class="col">${contrato.codigo_contrato}</td>
+                                        <td class="col">${contrato.fecha_contratacion}</td>
+                                        <td class="col">${contrato.codigo_suc.domicilio}</td>
+                                        <td class="col">${contrato.codigo_vig.clave}</td>
+                                        <td class="col">${contrato.dias_contratados}</td>
+                                        <td class="col">${contrato.armado==true? 'Si':'No'} </td>
+                                        <td class="col alert alert-success">${contrato.estado==true? 'Vigente':'Caduco'}</td>
+                                    </tr>
+                                </c:when>
+                                <c:when test="${not contrato.estado}">
+                                    <tr class="row">
+                                        <td class="col">${contrato.codigo_contrato}</td>
+                                        <td class="col">${contrato.fecha_contratacion}</td>
+                                        <td class="col">${contrato.codigo_suc.domicilio}</td>
+                                        <td class="col">${contrato.codigo_vig.clave}</td>
+                                        <td class="col">${contrato.dias_contratados}</td>
+                                        <td class="col">${contrato.armado==true? 'Si':'No'} </td>
+            
+                                        <td class="col alert alert-danger">${contrato.estado==true? 'Vigente':'Caduco'}</td>
+                                    </tr>
+                                </c:when>
+                              </c:choose>
+                        
                     </c:forEach>
+                    </tbody>
+                    
                 </table>
             </c:otherwise>
         </c:choose>

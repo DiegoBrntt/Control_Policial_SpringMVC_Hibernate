@@ -12,9 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import prog2.brunetti.controlPolicialSpringMVC.HibernateUtil;
-import prog2.brunetti.entities.Caso;
 import prog2.brunetti.entities.CondenaDetalle;
-import prog2.brunetti.entities.Detenido;
 
 
 /**

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import prog2.brunetti.repositories.RepoBandas;
 import prog2.brunetti.repositories.RepoDetenidos;
 
 @Controller

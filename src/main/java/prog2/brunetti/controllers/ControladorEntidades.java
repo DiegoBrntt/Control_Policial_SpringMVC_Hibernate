@@ -9,11 +9,9 @@ package prog2.brunetti.controllers;
  *
  * @author Grandalf
  */
-import prog2.brunetti.repositories.RepoUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import prog2.brunetti.repositories.RepoEntidades;
@@ -33,6 +31,7 @@ public class ControladorEntidades {
             @RequestParam(value = "central", required = true) String domicilio) {
 
         model.addAttribute("verificacionEntAlta", repoEntidades.altaEntidad(nombre_ent, domicilio));
+        model.addAttribute("tablaEnt", true);
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
     }
@@ -46,6 +45,7 @@ public class ControladorEntidades {
         switch (accion) {
             case "Baja":
                 model.addAttribute("verificacionEntBaja", repoEntidades.bajaEntidad(codigoEnt));
+                model.addAttribute("tablaEnt", true);
                 controlador.cargarDatos(model);
                 return controlador.mostrarMenuAdmin(model);
             case "Modificacion":
@@ -65,6 +65,7 @@ public class ControladorEntidades {
             @RequestParam(value = "domicilio", required = true) String domicilio) {
 
         model.addAttribute("verificacionEntMod", repoEntidades.modificarEntidad(entidad_id, nombre_ent, domicilio));
+        model.addAttribute("tablaEnt", true);
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
     }

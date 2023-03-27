@@ -1,34 +1,34 @@
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoUsuarios.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorUsuarios.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Juez.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoJuzgados.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorContratos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorJuez.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoBandas.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorCasos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Sucursal.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorEntidades.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\FactoriaArrayList.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Contrato.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoEntidades.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorBandas.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\CondenaDetalle.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoDetenidos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoCasos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoContratos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorJuzgados.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoSucursales.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoJueces.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Caso.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Entidad.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\Controlador.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Juzgado.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Usuario.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controlPolicialSpringMVC\HibernateUtil.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\repositories\RepoCondenaDetalle.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controlPolicialSpringMVC\AppConfig.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controlPolicialSpringMVC\AppInitializer.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorSucursales.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Banda.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\controllers\ControladorDetenidos.java
-D:\Diego\Informatica Aplicada\2do año\Programación II\NetBeansProjects\ControlPolicialSpringMVC\src\main\java\prog2\brunetti\entities\Detenido.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoEntidades.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorUsuarios.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoUsuarios.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/Controlador.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorSucursales.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Banda.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorCasos.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Detenido.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Entidad.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorDetenidos.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/FactoriaArrayList.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Contrato.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoDetenidos.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Juez.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoContratos.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorJuez.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Sucursal.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorJuzgados.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorContratos.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Caso.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoSucursales.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorBandas.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controlPolicialSpringMVC/AppConfig.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controllers/ControladorEntidades.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Usuario.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoCondenaDetalle.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/CondenaDetalle.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/entities/Juzgado.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controlPolicialSpringMVC/HibernateUtil.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/controlPolicialSpringMVC/AppInitializer.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoJuzgados.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoBandas.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoJueces.java
+/home/chalom/Documentos/Diego/Lenguajes-Cursos/JAVA/Control policial/Control_Policial_SpringMVC_Hibernate/src/main/java/prog2/brunetti/repositories/RepoCasos.java

@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Grandalf
  */
 public class FactoriaArrayList {
-    public static ArrayList getInstance(){
-        return new ArrayList<>();
+    public static <E> ArrayList<E> getInstance(){
+        return new ArrayList<E>();
     }
 }

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : vistaModificacion
-    Created on : 12 nov. 2021, 15:28:05
-    Author     : Grandalf
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

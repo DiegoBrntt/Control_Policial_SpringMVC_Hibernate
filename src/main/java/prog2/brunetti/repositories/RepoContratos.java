@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import prog2.brunetti.controlPolicialSpringMVC.HibernateUtil;
 import prog2.brunetti.entities.Contrato;
-import prog2.brunetti.entities.Entidad;
 import prog2.brunetti.entities.Sucursal;
 import prog2.brunetti.entities.Usuario;
 
@@ -179,7 +178,7 @@ public class RepoContratos {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Entidad ya existente";
+            return "Contrato existente";
         }    
     }
 

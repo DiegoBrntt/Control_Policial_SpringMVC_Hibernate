@@ -7,16 +7,13 @@ package prog2.brunetti.repositories;
 
 import java.time.LocalDate;
 import java.util.List;
-import javax.persistence.PersistenceException;
-import org.hibernate.SQLQuery;
 import org.hibernate.query.Query;
 import org.hibernate.Session;
-import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 import prog2.brunetti.controlPolicialSpringMVC.HibernateUtil;
-import prog2.brunetti.controllers.Controlador;
 import prog2.brunetti.entities.Usuario;
 
 /**
@@ -52,7 +49,9 @@ public class RepoUsuarios {
 
             Usuario usu = Usuario.getInstance();
             usu.setClave(clave);
-            usu.setPass(pass);
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+            String hashPass = encoder.encode(pass);
+            usu.setPass(hashPass);
             int i = LocalDate.now().getYear() - fecha_nacimiento.getYear();
             
             if(LocalDate.now().getMonthValue() < fecha_nacimiento.getMonthValue()){
@@ -76,7 +75,7 @@ public class RepoUsuarios {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Usuario ya existente";
+            return "Usuario existente";
         }
 
     }
@@ -99,7 +98,9 @@ public class RepoUsuarios {
             
             Usuario usu = session.get(Usuario.class, usuario_id);
             usu.setClave(clave);
-            usu.setPass(pass);
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+            String hashPass = encoder.encode(pass);
+            usu.setPass(hashPass);
             
             int i = LocalDate.now().getYear() - fecha_nacimiento.getYear();
             
@@ -125,7 +126,7 @@ public class RepoUsuarios {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Nombre de usuario ya existente";
+            return "Error al modificar usuario";
         }
 
     }
@@ -149,8 +150,14 @@ public class RepoUsuarios {
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             Query query = session.createQuery("from Usuario as usuario where"
-                    + " usuario.clave like '" + clave + "' and usuario.pass like '" + pass + "'");
+                    + " usuario.clave like '" + clave + "'");
             usuario = (Usuario) query.getSingleResult();
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+            if(!encoder.matches(pass, usuario.getPass())){
+                usuario.setClave("");
+                usuario.setPass("");
+                usuario.setTipo("");
+            }
             session.close();
         } catch (Exception e) {
             usuario = Usuario.getInstance();

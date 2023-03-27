@@ -40,7 +40,7 @@ public class ControladorSucursales {
     }
 
     @PostMapping("/accionSucursal")
-    public String accionEntidad(
+    public String accionSucursal(
             Model model,
             @RequestParam(value = "accion", required = true) String accion,
             @RequestParam(value = "accionSuc", required = true) Integer codigo_suc) {

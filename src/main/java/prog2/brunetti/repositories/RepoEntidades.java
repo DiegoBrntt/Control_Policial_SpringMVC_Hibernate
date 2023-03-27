@@ -91,7 +91,7 @@ public class RepoEntidades {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Entidad ya existente";
+            return "Entidad inexistente";
         }    
     }
 

@@ -16,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import prog2.brunetti.repositories.RepoContratos;
-import prog2.brunetti.repositories.RepoSucursales;
 
 @Controller
 public class ControladorContratos {
@@ -33,7 +32,7 @@ public class ControladorContratos {
             @RequestParam(value = "fecha_contrato", required = true) String fecha_contratacion,
             @RequestParam(value = "dias_contrato", required = true) Integer dias_contratados,
             @RequestParam(value = "codigo_vig_con", required = true) Integer codigo_vig,
-            @RequestParam(value = "armado", required = false ) Integer armado) {
+            @RequestParam(value = "armado", required = false ) String armado) {
         
         Boolean armadoB;
         if (armado != null) {
@@ -41,6 +40,9 @@ public class ControladorContratos {
         } else {
             armadoB = false;
         }
+
+
+        model.addAttribute("tablaCon", true);
 
         model.addAttribute("verificacionConAlta", repoContratos.altaContrato(codigo_suc, LocalDate.parse(fecha_contratacion), dias_contratados, armadoB, codigo_vig));
         controlador.cargarDatos(model);
@@ -64,6 +66,7 @@ public class ControladorContratos {
         }
 
         model.addAttribute("verificacionConMod", repoContratos.modificarContrato(codigo_contrato ,codigo_suc, LocalDate.parse(fecha_contratacion), dias_contratados, armadoB, codigo_vig));
+        model.addAttribute("tablaCon", true);
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
     }
@@ -76,6 +79,7 @@ public class ControladorContratos {
         
         switch (accion) {
             case "Baja":
+                model.addAttribute("tablaCon", true);
                 model.addAttribute("verificacionConBaja", repoContratos.bajaContrato(codigo_contrato));
                 controlador.cargarDatos(model);
                 return controlador.mostrarMenuAdmin(model);

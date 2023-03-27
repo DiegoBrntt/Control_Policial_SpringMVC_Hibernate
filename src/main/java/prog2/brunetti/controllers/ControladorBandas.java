@@ -29,6 +29,7 @@ public class ControladorBandas {
             Model model,
             @RequestParam(value = "nombre_banda", required = true) String nombre_banda) {
 
+        model.addAttribute("tablaDet", true);
         model.addAttribute("verificacionBanAlta", repoBandas.altaBanda(nombre_banda));
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
@@ -42,6 +43,7 @@ public class ControladorBandas {
 
         switch (accion) {
             case "Baja":
+                model.addAttribute("tablaDet", true);
                 model.addAttribute("verificacionBanBaja", repoBandas.bajaBanda(banda_id));
                 controlador.cargarDatos(model);
                 return controlador.mostrarMenuAdmin(model);
@@ -60,6 +62,7 @@ public class ControladorBandas {
             @RequestParam(value = "codigoBanMod", required = true) Integer banda_id,
             @RequestParam(value = "nombre_banda", required = true) String nombre_banda) {
 
+        model.addAttribute("tablaDet", true);
         model.addAttribute("verificacionBanMod", repoBandas.modificarBanda(banda_id, nombre_banda));
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);

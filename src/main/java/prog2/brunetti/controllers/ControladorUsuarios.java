@@ -14,7 +14,6 @@ import prog2.brunetti.repositories.RepoUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -34,6 +33,7 @@ public class ControladorUsuarios {
             @RequestParam(value = "edadUsu", required = true) String edad,
             @RequestParam(value = "tipoUsu", required = true) String tipo) {
 
+        model.addAttribute("tablaUsu", true);
         model.addAttribute("verificacionUsuAlta", repoUsuarios.altaUsuario(clave, pass, LocalDate.parse(edad), tipo));
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
@@ -47,6 +47,7 @@ public class ControladorUsuarios {
             @RequestParam(value = "tipoUsu", required = true) String tipo,
             @RequestParam(value = "nombreUsuMod", required = true) Integer usuario_id) {
 
+        model.addAttribute("tablaUsu", true);
         model.addAttribute("verificacionUsuMod", repoUsuarios.modificacionUsuario(clave, pass, LocalDate.parse(edad), tipo, usuario_id));
         controlador.cargarDatos(model);
         return controlador.mostrarMenuAdmin(model);
@@ -62,7 +63,8 @@ public class ControladorUsuarios {
 
         switch(accion){
             case "Baja": 
-                model.addAttribute("verificacionUsuBaja", repoUsuarios.bajaUsuario(usuario_id));
+            model.addAttribute("tablaUsu", true);
+            model.addAttribute("verificacionUsuBaja", repoUsuarios.bajaUsuario(usuario_id));
                 controlador.cargarDatos(model);
                 return controlador.mostrarMenuAdmin(model);
             case "Modificacion":

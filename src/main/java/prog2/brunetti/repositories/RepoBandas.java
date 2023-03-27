@@ -49,7 +49,7 @@ public class RepoBandas {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Banda ya existente";
+            return "Banda existente";
         }
 
     }
@@ -76,7 +76,7 @@ public class RepoBandas {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Banda ya existente";
+            return "Error al modificar banda.";
         }
     }
     public String bajaBanda(Integer banda_id) {
@@ -91,16 +91,15 @@ public class RepoBandas {
             session.close();
             return "OK";
         } catch (Exception e) {
-            return "Banda ya existente";
+            return "Banda inexistente";
         }
     }
     
     public List<Banda> getBandas() {
-        List<Banda> bandas;
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         Query query = session.createQuery("from Banda d order by d.banda_id asc");
-        bandas = query.getResultList();
+        List<Banda> bandas = query.getResultList();
         session.close();
         return bandas;
     }
